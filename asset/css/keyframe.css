@@ -1,0 +1,26 @@
+/* @keyframes slide {
+    0%{
+        background-image: url(../img/1.jpg);
+    }
+    25%{
+        background-image: url(../img/2.jpg);
+    }
+    50%{
+        background-image: url(../img/3.jpg);
+    }
+    75%{
+        background-image: url(../img/4.jpg);
+    } 
+    100% {
+        background-image: url(../img/5.jpg);
+    }
+} */
+
+@keyframes bouncebb {
+    0% {
+      transform: translateY(3px);
+    }
+    100% {
+      transform: translateY(5px);
+    }
+  }

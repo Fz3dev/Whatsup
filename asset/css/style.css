@@ -1,0 +1,223 @@
+@import url("media.css");
+@import url("keyframe.css");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: Roboto;
+  user-select: none;
+}
+:root {
+  --color-bg: rgb(246, 246, 246);
+  --color-fg-red: rgb(143, 30, 32);
+  --color-fg-terra: rgb(181, 78, 20);
+  --color-fg-yell: rgb(254, 204, 141);
+  --color-fg-grey: rgb(198, 208, 220);
+  --color-fg-dark: rgb(37, 46, 58);
+  --color-opacity: rgba(0, 0, 0, 0.346);
+  --color-checked: red;
+}
+.coop {
+  display: none !important;
+}
+.container {
+  padding: 0.5rem 3rem;
+}
+
+/* ----- HEADER ------ */
+.barNav {
+  background-color: var(--color-bg);
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  color: var(--color-fg-red);
+}
+.burgerHide {
+  display: none;
+}
+.signUserHide {
+  display: none;
+}
+.helloUser {
+  display: block;
+}
+nav {
+  display: flex;
+  align-items: center;
+}
+nav i {
+  color: var(--color-fg-red);
+  display: flex;
+  align-items: center;
+  margin-right: 10%;
+}
+nav a img {
+  margin-left: 10%;
+  width: 50%;
+}
+nav li {
+  margin: 20%;
+  color: bisque;
+}
+.menu {
+  border-radius: 20px;
+  width: 5rem;
+  position: absolute;
+  top: 11%;
+  left: 63%;
+  font-size: 15px;
+  white-space: nowrap;
+  background-color: var(--color-opacity);
+}
+.menuBis {
+  border-radius: 20px;
+  width: 6rem;
+  position: absolute;
+  top: 11%;
+  left: 73%;
+  font-size: 15px;
+  white-space: nowrap;
+  background-color: var(--color-opacity);
+}
+.menuBis a,
+.menu a {
+  color: var(--color-fg-red);
+}
+/* -----  MAIN ----- */
+.slide {
+  width: 100%;
+  height: auto;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+  animation: slide 15s linear infinite 0s;
+  background-image: url(../img/1.jpg);
+}
+
+/*MENU Card*/
+.polaroid img {
+  width: 100%;
+  display: block;
+}
+.polaroid {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.menuCard legend {
+  font-size: 1rem;
+  font-style: oblique;
+  color: var(--color-fg-terra);
+}
+/* GRID */
+.cardGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+.gridDate {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.gridFriends {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.gridFamily {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.gridWork {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+/* Checkbox */
+label img {
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+input[type="radio"] {
+  display: none;
+}
+:checked + label img {
+  border: 3px solid var(--color-checked);
+}
+
+/* TITLE */
+/* .menuCard h1 {
+  color: var(--color-fg-red);
+  font-size: 1.3rem;
+  letter-spacing: 1.4px;
+}
+.menuCard h2 {
+  font-style: italic;
+  color: var(--color-fg-terra);
+  font-size: 1.1rem;
+  letter-spacing: 1.4px;
+}
+.title {
+  width: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  margin: 1rem auto;
+  padding: 0.5rem;
+} */
+h1, h2 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin: 0;
+  line-height: 47px;
+  letter-spacing: 2px;
+}
+.title {
+  transform: translateX(-50%) rotate(-10deg);
+  display: block;
+  float: left;
+  left: 50%;
+  position: relative;
+}
+h1, h2 {
+  transform: skew(-10deg);
+  display: block;
+  float: left;
+  min-width: 10px;
+  min-height: 10px;
+  position: relative;
+}
+
+/* footer */
+footer {
+  background-color: var(--color-bg);
+}
+.social {
+  display: flex;
+  justify-content: center;
+}
+.social li {
+  margin: 1rem 1rem;
+}
+.footertext {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footertext span {
+  color: var(--color-fg-grey);
+  font-weight: 200;
+  font-style: oblique;
+}
+
+/* button:hover {transform: translatey(3px);}
+  /* buttons hover Animation
+  button:hover {
+    animation: bouncebb 0.4s ease-in-out infinite alternate;}*/
+/* MEDIA QUERIES */
